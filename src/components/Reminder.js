@@ -2,16 +2,15 @@ import * as React from "react";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const options = [
-  "Delete Note ",
-  "Add Label ",
-  "Add drawing",
-  "Make a copy",
+  "Later Today  ",
+  "Tomorrow ",
+  "Next Week",
+  "Select date and time",
   "Show tick boxes ",
-  "Copy to Google Docs",
-  "Version History",
+  "Select Place",
 ];
 export default function LongMenu({ icon }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -26,9 +25,9 @@ export default function LongMenu({ icon }) {
   return (
     <div>
       <IconButton
+        style={{ color: "orange" }}
         aria-label="more"
         id="long-button"
-        style={{ color: "black" }}
         aria-controls={open ? "long-menu" : undefined}
         aria-expanded={open ? "true" : undefined}
         aria-haspopup="true"
@@ -50,6 +49,7 @@ export default function LongMenu({ icon }) {
             key={option}
             selected={option === "Pyxis"}
             onClick={handleClose}
+            style={{ display: "flex", justifyContent: "space-between" }}
           >
             {option}
           </MenuItem>

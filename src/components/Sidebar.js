@@ -18,6 +18,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ProfileButton from "./ProfileButton";
+import { Link } from "react-router-dom";
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     left: false,
@@ -67,23 +68,98 @@ export default function TemporaryDrawer() {
           {["Notes", "Reminder", "Labels", "Edit Labels", "Archive", "Bin"].map(
             (text, index) => (
               <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index === 0 ? (
-                      <NoteIcon />
-                    ) : index === 1 ? (
-                      <NotificationsIcon />
-                    ) : index === 2 ? (
-                      <LabelIcon />
-                    ) : index === 3 ? (
-                      <EditIcon />
-                    ) : index === 4 ? (
-                      <ArchiveIcon />
-                    ) : (
-                      <DeleteIcon />
-                    )}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
+                <ListItemButton
+                  style={{
+                    display: "flex",
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  {index === 0 ? (
+                    <Link
+                      to="/"
+                      style={{
+                        display: "flex",
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      <ListItemIcon>
+                        <NoteIcon />
+                      </ListItemIcon>
+                      <ListItemText primary={text} />
+                    </Link>
+                  ) : index === 1 ? (
+                    <Link
+                      to="/reminders"
+                      style={{
+                        display: "flex",
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      <ListItemIcon>
+                        <NotificationsIcon />
+                      </ListItemIcon>
+                      <ListItemText primary={text} />
+                    </Link>
+                  ) : index === 2 ? (
+                    <Link
+                      to="/labels"
+                      style={{
+                        display: "flex",
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      <ListItemIcon>
+                        <LabelIcon />
+                      </ListItemIcon>
+                      <ListItemText primary={text} />
+                    </Link>
+                  ) : index === 3 ? (
+                    <Link
+                      to="/editlabel"
+                      style={{
+                        display: "flex",
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      <ListItemIcon>
+                        <EditIcon />
+                      </ListItemIcon>
+                      <ListItemText primary={text} />
+                    </Link>
+                  ) : index === 4 ? (
+                    <Link
+                      to="/archived"
+                      style={{
+                        display: "flex",
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      <ListItemIcon>
+                        <ArchiveIcon />
+                      </ListItemIcon>
+                      <ListItemText primary={text} />
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/bin"
+                      style={{
+                        display: "flex",
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      <ListItemIcon>
+                        <DeleteIcon />
+                      </ListItemIcon>
+                      <ListItemText primary={text} />
+                    </Link>
+                  )}
                 </ListItemButton>
               </ListItem>
             )

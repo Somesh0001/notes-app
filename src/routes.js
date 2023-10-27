@@ -1,4 +1,9 @@
 import Home from "./pages/Home";
+import Labels from "./pages/Labels";
+import Reminder from "./pages/Reminder";
+import EditLabel from "./pages/EditLabel";
+import Archived from "./pages/Archived";
+import Bin from "./pages/Bin";
 import Layout from "./components/Layout";
 const Routes = [
   {
@@ -9,31 +14,26 @@ const Routes = [
         index: true,
         element: <Home />,
       },
-      //   {
-      //     path: "/sports/:key",
-      //     element: <Sports />,
-      //   },
-      //   {
-      //     path: "/our-team",
-      //     element: <CoreTeam />,
-      //   },
-      //   {
-      //     path: "/matches",
-      //     children: [
-      //       {
-      //         index: true,
-      //         element: <Matches />,
-      //       },
-      //       {
-      //         path: "/matches/:id",
-      //         element: <SpecificSportMatch />,
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     path: "/Score",
-      //     element: <Score />,
-      //   },
+      {
+        path: "/reminders",
+        element: <Reminder />,
+      },
+      {
+        path: "/labels",
+        element: <Labels />,
+      },
+      {
+        path: "/editlabel",
+        element: <EditLabel />,
+      },
+      {
+        path: "/archived",
+        element: <Archived />,
+      },
+      {
+        path: "/bin",
+        element: <Bin />,
+      },
     ],
   },
 ];

@@ -11,28 +11,27 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 //
 import BackPicker from "./BackPicker";
 import ExpandIcon from "./Moreicon";
+import Reminder from "./Reminder";
+import SnackBar from "./SnackBar"
 //
 import Tooltip from "@mui/material/Tooltip";
 //
 import styled from "styled-components";
-import { useState } from "react";
-function note({ text }) {
-  // const Button = styled.button`
-  //   background-color: tranparent;
-  //   border: 1px solid #ccc;
-  //   cursor: pointer;
-  //   opacity: 0.5;
+import { useState, useEffect, useRef } from "react";
 
-  //   &:hover {
-  //     background-color: #d6dcd5;
-  //     opacity: 1;
-  //   }
-  // `;
+const Note = ({ text }) => {
+  const [backColor, setBackColor] = useState("white");
+  const myDiv = useRef(null);
+  useEffect(() => {
+    console.log(backColor);
+    myDiv.current.style.backgroundColor = backColor;
+  }, [backColor]);
+
   const TextComponent = ({ text }) => {
     const truncatedText = text.length > 200 ? `${text.slice(0, 200)}...` : text;
-
     return <div className="text-container">{truncatedText}</div>;
   };
+
   const Icon = styled.i`
     opacity: ${({ isActive }) => (isActive ? 1 : 0.5)};
     cursor: pointer;
@@ -43,19 +42,30 @@ function note({ text }) {
 
   const ToggleableIcon = ({ icon }) => {
     const [isActive, setIsActive] = useState(false);
-
     const handleClick = () => {
       setIsActive(!isActive);
     };
-
     return (
       <Icon onClick={handleClick} isActive={isActive}>
         {icon}
       </Icon>
     );
   };
+
+  const fileInputRef = useRef(null);
+
+  const handleUploadButtonClick = () => {
+    fileInputRef.current.click(); // Trigger file input click when IconButton is clicked
+  };
+
+  const handleFileChange = (event) => {
+    const selectedFile = event.target.files[0];
+    // Handle the selected file, e.g., upload it to the server or display it
+  };
+
   return (
     <div
+      ref={myDiv}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -67,7 +77,7 @@ function note({ text }) {
         width: "240px",
         maxHeight: "340px",
         color: "black",
-        backgroundColor: "white",
+        backgroundColor: { backColor },
       }}
     >
       <div
@@ -77,6 +87,7 @@ function note({ text }) {
           position: "relative",
           right: "2px",
           height: "auto",
+          marginTop: "1em",
         }}
       >
         <ToggleableIcon icon={<PushPinIcon />} />
@@ -95,29 +106,40 @@ function note({ text }) {
           alignItems: "center",
           justifyContent: "space-evenly",
           width: "200px",
+          color: "black",
         }}
       >
         <Tooltip title={"Remind Me"} arrow>
-          <IconButton>
-            <AddAlertIcon />
-          </IconButton>
+          <Reminder icon={<AddAlertIcon />} />
         </Tooltip>
         <Tooltip title={"Collaborator"} arrow>
-          <IconButton>
+          <IconButton style={{ color: "yellow" }}>
             <FolderSharedIcon />
           </IconButton>
         </Tooltip>
         <Tooltip title={"Background Options"} arrow>
-          <BackPicker icon={<ColorLensIcon />} />{" "}
+          <BackPicker icon={<ColorLensIcon />} setColor={setBackColor} />{" "}
         </Tooltip>
         <Tooltip title={"Add Image"} arrow>
-          <IconButton>
+          <input
+            type="file"
+            accept="image/*"
+            ref={fileInputRef}
+            style={{ display: "none" }}
+            onChange={handleFileChange}
+          />
+          <IconButton
+            color="primary"
+            aria-label="upload picture"
+            component="span"
+            onClick={handleUploadButtonClick}
+          >
             <ImageIcon />
           </IconButton>
         </Tooltip>
         <Tooltip title={"Archive"} arrow>
-          <IconButton>
-            <ArchiveIcon />
+          <IconButton style={{ color: "green" }}>
+            <SnackBar />
           </IconButton>
         </Tooltip>
         <Tooltip title={"More"} arrow>
@@ -126,6 +148,6 @@ function note({ text }) {
       </div>
     </div>
   );
-}
+};
 
-export default note;
+export default Note;

@@ -92,7 +92,7 @@ function CreateBar() {
             display: "flex",
             justifyContent: "right",
             marginRight: "20px",
-           
+
             marginBottom: "0px",
           }}
         >
@@ -112,7 +112,7 @@ function CreateBar() {
             minHeight: "2em",
             padding: "5px",
           }}
-          placeholder="Enter Title"
+          placeholder={click === true ? "Enter Title" : "Add a note..."}
         />
         <textarea
           rows="5"
