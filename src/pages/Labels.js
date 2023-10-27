@@ -16,6 +16,7 @@ function Labels() {
           flexWrap: "wrap",
           gap: "10px",
           marginTop: "2em",
+          paddingBottom: "20px",
         }}
       >
         <LabelNote label={"Work"} />

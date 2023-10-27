@@ -19,6 +19,8 @@ function Home() {
           justifyContent: "center",
           margin: "auto",
           padding: "auto",
+          backgroundColor: "#97DBCA",
+          paddingBottom: "20px",
         }}
       >
         <h1>MyNotes</h1>
@@ -35,6 +37,7 @@ function Home() {
             alignItems: "center",
             gap: "10px",
             flexWrap: "wrap",
+            backgroundColor: "#97dbca",
           }}
         >
           <Note text={text} />

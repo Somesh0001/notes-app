@@ -10,7 +10,7 @@ function Archived() {
         alignItems: "center",
         flexWrap: "wrap",
         width: "100%",
-       
+        minHeight: "100vh",
       }}
     >
       <h1>Archieves</h1>

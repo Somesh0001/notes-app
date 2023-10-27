@@ -23,6 +23,7 @@ const text =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ullam iste corporis sapiente quaerat laudantium nostrum neque odit, quisquam aperiam qui repellat unde optio! Quod corrupti quidem nulla soluta, dolor, mollitia ad corporis fugiat ullam quam iusto non iste officiis?";
 
 const Note = ({ due }) => {
+  const [enter, setEnter] = useState(false);
   const [backColor, setBackColor] = useState("white");
   const myDiv = useRef(null);
   useEffect(() => {
@@ -77,13 +78,18 @@ const Note = ({ due }) => {
           justifyContent: "space-between",
           borderRadius: "12px",
           boxShadow:
-            "rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px",
+            enter === true
+              ? "rgb(38, 57, 77) 0px 20px 30px -10px"
+              : "rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px",
           width: "240px",
           maxHeight: "340px",
           color: "black",
           backgroundColor: "white",
           position: "relative",
+          cursor: "pointer",
         }}
+        onMouseEnter={() => setEnter(true)}
+        onMouseLeave={() => setEnter(false)}
       >
         <div
           style={{

@@ -1,7 +1,10 @@
 import React from "react";
 import back from "../assets/back7.jpg";
 import { Link } from "react-router-dom";
+import Registration from "../components/Registration";
+import { useState } from "react";
 function Landing() {
+  const [register, setRegister] = useState(false);
   return (
     <>
       <div
@@ -45,12 +48,22 @@ font-family: 'DM Serif Display', serif; */}
                 "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
               margin: "1em auto auto auto",
             }}
+            onClick={() => setRegister(true)}
           >
-            <Link to="/home" style={{ color: "white", textDecoration: "none" }}>
-              Try Now!!
-            </Link>
+            Try Now!!
           </button>
         </div>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50% , -50%)",
+          display: register ? "block" : "none",
+        }}
+      >
+        <Registration />
       </div>
     </>
   );

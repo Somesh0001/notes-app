@@ -17,6 +17,9 @@ const text =
 
 const Note = () => {
   const [backColor, setBackColor] = useState("white");
+  const [restore, setRestore] = useState(false);
+  const [delperm, setDelPerm] = useState(false);
+  const [deleted, setDeleted] = useState(false);
   const myDiv = useRef(null);
   useEffect(() => {
     console.log(backColor);
@@ -86,7 +89,7 @@ const Note = () => {
             right: "2px",
             height: "auto",
             marginTop: "1em",
-            opacity: "0.6",
+            opacity: "1",
           }}
         >
           <ToggleableIcon icon={<PushPinIcon />} />
@@ -95,7 +98,7 @@ const Note = () => {
           style={{
             maxHeight: 200,
             width: "200px",
-            opacity: "0.6",
+            opacity: "0.8",
           }}
         >
           <TextComponent text={text} />
@@ -107,7 +110,7 @@ const Note = () => {
             justifyContent: "space-evenly",
             width: "200px",
             color: "black",
-            opacity: "0.6",
+            opacity: "1",
           }}
         >
           <Tooltip title={"Remind Me"} arrow>
@@ -135,13 +138,19 @@ const Note = () => {
           style={{
             position: "absolute",
             width: "100%",
-            borderRadius: "10px",
-            backgroundColor: "red",
+
+            backgroundColor: deleted === true ? "red" :  "#EC7A7A",
             color: "white",
-            top: "40%",
+            bottom: "12%",
             left: "0px",
             fontWeight: "bold",
             fontSize: "2em",
+          }}
+          onMouseEnter={() => {
+            setDeleted(true);
+          }}
+          onMouseLeave={() => {
+            setDeleted(false);
           }}
         >
           DELETED
@@ -154,7 +163,7 @@ const Note = () => {
             borderRadius: "10px",
             color: "white",
             left: "0px",
-            top: "50%",
+            bottom: "0%",
             fontWeight: "bold",
             marginTop: "1em",
             borderRadius: "10px",
@@ -163,12 +172,14 @@ const Note = () => {
         >
           <button
             style={{
-              backgroundColor: "green",
+              backgroundColor: restore === true ? "green" : "#7FEA6A",
               width: "50%",
               cursor: "pointer",
               border: "none",
-              borderRadius: "10px",
+              // borderRadius: "10px",
             }}
+            onMouseEnter={() => setRestore(true)}
+            onMouseLeave={() => setRestore(false)}
           >
             <Tooltip title={"Restore"}>
               <RestoreIcon style={{ color: "white" }} />
@@ -176,12 +187,14 @@ const Note = () => {
           </button>
           <button
             style={{
-              backgroundColor: "darkred",
+              backgroundColor: delperm === true ? "red" : "#E392E5",
               width: "50%",
               cursor: "pointer",
               border: "none",
-              borderRadius: "10px",
+              // borderRadius: "10px",
             }}
+            onMouseEnter={() => setDelPerm(true)}
+            onMouseLeave={() => setDelPerm(false)}
           >
             <Tooltip title={"Delete permanently"}>
               {" "}

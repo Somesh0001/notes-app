@@ -14,7 +14,7 @@ function ArchiveNote() {
           margin: "10px",
           textAlign: "center",
           height: "auto",
-          backgroundColor: "#fff",
+          backgroundColor: "#97dbca",
           marginTop: "1em",
           display: "flex",
           justifyContent: "left",

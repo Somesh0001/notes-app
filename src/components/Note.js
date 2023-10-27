@@ -77,10 +77,11 @@ const Note = ({ text }) => {
           enter === false
             ? "rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px"
             : "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px",
-        width: "240px",
+        width: "250px",
         maxHeight: "340px",
         color: "black",
         backgroundColor: { backColor },
+        marginBottom: "20x",
       }}
       onMouseEnter={() => setEnter(true)}
       onMouseLeave={() => setEnter(false)}
@@ -112,6 +113,7 @@ const Note = ({ text }) => {
           justifyContent: "space-evenly",
           width: "200px",
           color: "black",
+          padding: "0px 10px",
         }}
       >
         <Tooltip title={"Remind Me"} arrow>
