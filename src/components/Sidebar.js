@@ -17,7 +17,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import defaultUser from "../assets/defaultUser.png";
 import ProfileButton from "./ProfileButton";
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -95,7 +94,10 @@ export default function TemporaryDrawer() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box
+      sx={{ flexGrow: 1 }}
+      style={{ boxShadow: "rgba(0, 0, 0, 0.18) 0px 2px 4px" }}
+    >
       <Grid
         container
         spacing={2}
@@ -161,12 +163,13 @@ export default function TemporaryDrawer() {
                 style={{
                   width: "80%",
                   height: "fit-content",
-                  borderRadius: "2%",
+                  borderRadius: "10px",
                   margin: "10px 10px",
                   border: "1px solid #ccc",
                   outline: "none",
                   minHeight: "2em",
                   padding: "5px",
+                  boxShadow: "rgba(0, 0, 0, 0.18) 0px 2px 4px",
                 }}
                 placeholder="Search..."
               />
@@ -205,21 +208,6 @@ export default function TemporaryDrawer() {
             justifyContent: "center",
           }}
         >
-          {/* <button
-            style={{
-              backgroundColor: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            {" "}
-            <img
-              src={defaultUser}
-              height="50px"
-              width={"50px"}
-              style={{ borderRadius: "50%", cursor: "pointer" }}
-            />
-          </button> */}
           <ProfileButton />
         </Grid>
       </Grid>
