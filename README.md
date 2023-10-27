@@ -19,15 +19,21 @@ You may also see any lint errors in the console.
 <br/>
 This is the Landing Page of the website. 
 <br/>
-Click on "Try Now!!"  button to view  a Login/Sign Up form .  
+Click on "Try Now!!"  button to view  a Login/Sign Up form 
+<img width="944" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/2d1dc08a-4fb1-4024-ad57-b5767e478f0d">
+<img width="943" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/2c7964db-5eaf-4623-a9aa-8ed32c718ad2">
+
+## Login/Sign Up popup
 <br/>
-<img width="382" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/bbf6de7b-462f-45ea-82e9-fc91bf8839c2">
-<img width="380" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/4be27af9-eec3-441e-bf15-ccded160fc66">
+<img width="960" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/6b789f8c-315d-425a-9411-e62e5c54a858">
 <br/>
 Clicking on the "Submit" button will redirect to the home page 
 <br/>
-<img width="953" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/43018343-d9c7-4c2b-9142-c289c6e668d2">
-<img width="958" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/df57018d-e7e3-4900-8381-00959af5094d">
+
+## Home
+<img width="960" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/ff7b9d7c-aa34-42ef-bbe2-c85e41f6e208">
+<img width="958" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/16d19aab-f621-4716-93c3-80088a325637">
+
 <br/>
 Each Note has following features: 
 <br/>
@@ -44,6 +50,7 @@ Each Note has following features:
 6. mark as Archived 
 <br/>
 7. More button for :
+<br/> 
 <br/>
 a. Delete Note
 <br/>
@@ -57,43 +64,56 @@ a. Delete Note
                      <br/>
                      f. Version History
                      <br/>
-8. Highlight on hover 
-<br/>
-# Side Navigation bar 
+9. Highlight on hover 
+<br
+
+  
+## Side Navigation bar 
 A side Navigation bar is present that will be easy to use in all sizes of screens 
 <br/>
-<img width="958" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/c688bb36-b6e9-4868-8aa0-903a5129480e">
-<br/>
-# Reminders
+<img width="960" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/566aff54-2d4b-4100-8777-d141af2c118c">
+
+## Reminders
 A reminder tab is also present as: - 
-<img width="953" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/553822f9-f786-4f81-a497-0ce768e16874"> 
+<img width="956" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/43bab370-b735-432c-8d1a-f41ec2b3ce62">
+
 <br/>
 This has a marker over it to show the due date and time 
 Alongwith this a hover feature is also added for each card upon which box-shadow changes 
 <br/>
-# In the Labelled Notes section 
-<img width="954" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/1c10c5dc-6a53-4b5e-846a-e55e44b2329a"> 
+
+## In the Labelled Notes section 
+<img width="954" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/757641cf-9688-44b1-aae6-afa77c26b9de">
+
+<img width="956" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/37225d9c-80c4-4c0e-a281-65aa777c5890">
+
 <br/>
 All notes are shown with a particular labbel added to them during the time of creation   
+
+## Edit Labels 
 <br/>
-# Edit Labels 
-<br/>
-<img width="959" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/cfdb3482-2b4a-47e6-9ae6-d6c839f9fcb8">
+<img width="957" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/a2df33c5-913a-4870-b4ec-63d3d9c425be">
+<img width="959" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/d70392bf-1376-4aa5-9449-ac21b0cabfcc">
 <br/>
 Here in this section, user can edit i.e. rename or delete the labels. This page is also dynamic with hover effectss and icon changing by sensing user's activity 
 <br/>
-# Archive Section 
+
+## Archive Section 
 <br/>
-<img width="956" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/1563069c-e368-41df-8217-21611d3603ae"><br/>
+<img width="955" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/ca20d44a-30a6-45a6-95df-456c94f54225">
+<br/>
+<img width="959" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/4e9b2fe1-61e4-4a9f-9be4-c3922ad9461f">
+<br/> 
 Here, in this section, upon hovering on each note an icon will come up upon clicking which that note will be unarchived. This icon is also visible in the first note of the above provided image, that was hovered. Alongwith that, a box-shadow effect is also applied on the cards so as to show selection. 
 <br/>
-# Deleted Notes 
-<br/>
-<img width="955" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/ab813d3c-460a-42d5-a3bd-bd4148649672"><br/>
-<img width="940" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/e56c3916-8779-4f99-a5c5-c7e7245f9050"> <br/>
-<img width="204" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/d5adc31c-8ddb-4ca8-8b1f-468951d2b7bd"> <br/>
-<img width="191" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/cf9ff685-26fa-40a3-bb91-54bdb605b2ca"><br/>
 
+## Deleted Notes 
+<br/>
+<img width="960" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/712b82ff-bf0c-4ca7-8117-48a38cc9d527">
+<img width="383" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/afc12b3d-7d3d-4957-b8cf-ded28df29179">
+<img width="195" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/9e82a422-86f4-4ae5-8dbd-cfd5577843fd">
+<img width="188" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/8083cd4e-c703-41e7-bd66-ccbceae44079">
+<img width="954" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/c6fbb410-624c-4c80-ba53-9ee94a1ef945">
 
 This shows the deleted notes section. Here the notes are stored for 7 days post deletion after which they get permanently deleted. There are also 2 buttons that allow user either to restore that note or delete it permanently. Hover effect is also provided on all buttons. Buttons change background color uppon hover that confirms their selection.  
 Here date-wise notes are stored for 7 days ...
