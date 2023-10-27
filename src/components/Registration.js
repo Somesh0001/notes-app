@@ -45,7 +45,6 @@ export default function Registration() {
   const labelStyle = { display: "flex", justifyContent: "space-between" };
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };

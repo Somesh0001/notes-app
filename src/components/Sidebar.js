@@ -275,7 +275,8 @@ export default function TemporaryDrawer() {
             >
               <button
                 style={{
-                  backgroundColor: isHovered ? "#45FFCA" : "#89CFF3",
+                  color: "white",
+                  backgroundColor: isHovered ? "#00AEF8" : "#F80000",
                   borderRadius: "22%",
                   outline: "none",
                   border: "1px solid #89CFF3",
