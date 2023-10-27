@@ -14,57 +14,104 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Landing Page 
+<img width="960" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/1af9321f-e426-4b69-a9b0-dbc139f655a2">
+<br/>
+This is the Landing Page of the website. 
+<br/>
+Click on "Try Now!!"  button to view  a Login/Sign Up form .  
+<br/>
+<img width="382" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/bbf6de7b-462f-45ea-82e9-fc91bf8839c2">
+<img width="380" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/4be27af9-eec3-441e-bf15-ccded160fc66">
+<br/>
+Clicking on the "Submit" button will redirect to the home page 
+<br/>
+<img width="953" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/43018343-d9c7-4c2b-9142-c289c6e668d2">
+<img width="958" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/df57018d-e7e3-4900-8381-00959af5094d">
+<br/>
+Each Note has following features: 
+<br/>
+1. Option to pin/unpin
+<br/>
+2. Option to mark it as reminder 
+<br/>
+3. Collaborator 
+<br/>
+4. Change background color 
+<br/>
+5. Upload an image 
+<br/>
+6. mark as Archived 
+<br/>
+7. More button for :
+<br/>
+a. Delete Note
+<br/>
+                     b. Add label
+                     <br/>
+                     c. Add drawing 
+                     <br/>
+                     d. Make a copy Show tick boxes
+                     <br/>
+                     e. Copy to Google Docs 
+                     <br/>
+                     f. Version History
+                     <br/>
+8. Highlight on hover 
+<br/>
+# Side Navigation bar 
+A side Navigation bar is present that will be easy to use in all sizes of screens 
+<br/>
+<img width="958" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/c688bb36-b6e9-4868-8aa0-903a5129480e">
+<br/>
+# Reminders
+A reminder tab is also present as: - 
+<img width="953" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/553822f9-f786-4f81-a497-0ce768e16874"> 
+<br/>
+This has a marker over it to show the due date and time 
+Alongwith this a hover feature is also added for each card upon which box-shadow changes 
+<br/>
+# In the Labelled Notes section 
+<img width="954" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/1c10c5dc-6a53-4b5e-846a-e55e44b2329a"> 
+<br/>
+All notes are shown with a particular labbel added to them during the time of creation   
+<br/>
+# Edit Labels 
+<br/>
+<img width="959" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/cfdb3482-2b4a-47e6-9ae6-d6c839f9fcb8">
+<br/>
+Here in this section, user can edit i.e. rename or delete the labels. This page is also dynamic with hover effectss and icon changing by sensing user's activity 
+<br/>
+# Archive Section 
+<br/>
+<img width="956" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/1563069c-e368-41df-8217-21611d3603ae"><br/>
+Here, in this section, upon hovering on each note an icon will come up upon clicking which that note will be unarchived. This icon is also visible in the first note of the above provided image, that was hovered. Alongwith that, a box-shadow effect is also applied on the cards so as to show selection. 
+<br/>
+# Deleted Notes 
+<br/>
+<img width="955" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/ab813d3c-460a-42d5-a3bd-bd4148649672"><br/>
+<img width="940" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/e56c3916-8779-4f99-a5c5-c7e7245f9050"> <br/>
+<img width="204" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/d5adc31c-8ddb-4ca8-8b1f-468951d2b7bd"> <br/>
+<img width="191" alt="image" src="https://github.com/Somesh0001/notes-app/assets/116994984/cf9ff685-26fa-40a3-bb91-54bdb605b2ca"><br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+This shows the deleted notes section. Here the notes are stored for 7 days post deletion after which they get permanently deleted. There are also 2 buttons that allow user either to restore that note or delete it permanently. Hover effect is also provided on all buttons. Buttons change background color uppon hover that confirms their selection.  
+Here date-wise notes are stored for 7 days ...
+<br/>
+Hope the viewers like this frontend ....
+Thank You !! 🙏🙏
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+                   
+                    
+                     
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
