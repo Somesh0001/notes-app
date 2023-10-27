@@ -5,10 +5,20 @@ import AddAlertIcon from "@mui/icons-material/AddAlert";
 import FolderSharedIcon from "@mui/icons-material/FolderShared";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 import ImageIcon from "@mui/icons-material/Image";
-import ArchiveIcon from "@mui/icons-material/Archive";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import IconButton from "@mui/material/IconButton";
+// mmll
+import BackPicker from "./BackPicker";
+import ExpandIcon from "./Moreicon";
+import Reminder from "./Reminder";
+import SnackBar from "./SnackBar";
+//
+import Tooltip from "@mui/material/Tooltip";
+//
 import styled from "styled-components";
+import { useEffect, useRef } from "react";
 function CreateBar() {
+  const [backColor, setBackColor] = useState("white");
   const Button = styled.button`
     background-color: tranparent;
     border: 1px solid #ccc;
@@ -56,6 +66,16 @@ function CreateBar() {
       </Icon>
     );
   };
+  const fileInputRef = useRef(null);
+
+  const handleUploadButtonClick = () => {
+    fileInputRef.current.click(); // Trigger file input click when IconButton is clicked
+  };
+
+  const handleFileChange = (event) => {
+    const selectedFile = event.target.files[0];
+    // Handle the selected file, e.g., upload it to the server or display it
+  };
 
   return (
     <>
@@ -82,6 +102,7 @@ function CreateBar() {
           border: "1px solid #ccc",
           boxShadow:
             "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",
+          backgroundColor: backColor,
         }}
       >
         <div
@@ -131,31 +152,50 @@ function CreateBar() {
         <div
           style={{
             display: click === true ? "flex" : "none",
-            justifyContent: "space-between",
+            justifyContent: "space-evenly",
+            alignItems: "center",
             margin: "10px 10px 0px 10px",
             padding: "0px",
             maxWidth: "50vw",
             width: "90%",
           }}
         >
-          <Button>
-            <AddAlertIcon />
-          </Button>
-          <Button>
-            <FolderSharedIcon />
-          </Button>
-          <Button>
-            <ColorLensIcon />
-          </Button>
-          <Button>
-            <ImageIcon />
-          </Button>
-          <Button>
-            <ArchiveIcon />
-          </Button>
-          <Button>
-            <MoreVertIcon />
-          </Button>
+          <Tooltip title={"Remind Me"} arrow>
+            <Reminder icon={<AddAlertIcon />} />
+          </Tooltip>
+          <Tooltip title={"Collaborator"} arrow>
+            <IconButton style={{ color: "yellow" }}>
+              <FolderSharedIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title={"Background Options"} arrow>
+            <BackPicker icon={<ColorLensIcon />} setColor={setBackColor} />{" "}
+          </Tooltip>
+          <Tooltip title={"Add Image"} arrow>
+            <input
+              type="file"
+              accept="image/*"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileChange}
+            />
+            <IconButton
+              color="primary"
+              aria-label="upload picture"
+              component="span"
+              onClick={handleUploadButtonClick}
+            >
+              <ImageIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title={"Archive"} arrow>
+            <IconButton style={{ color: "green" }}>
+              <SnackBar />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title={"More"} arrow>
+            <ExpandIcon icon={<MoreVertIcon />} />
+          </Tooltip>
         </div>
         <div
           style={{

@@ -15,9 +15,11 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import DeleteIcon from "@mui/icons-material/Delete";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Logo from "../assets/logo.png";
 import { Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ProfileButton from "./ProfileButton";
+import Tooltip from "@mui/material/Tooltip";
 import { Link } from "react-router-dom";
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -77,7 +79,7 @@ export default function TemporaryDrawer() {
                 >
                   {index === 0 ? (
                     <Link
-                      to="/"
+                      to="/home"
                       style={{
                         display: "flex",
                         textDecoration: "none",
@@ -191,7 +193,7 @@ export default function TemporaryDrawer() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            marginTop: "2%",
+            marginTop: "1%",
           }}
         >
           {["left"].map((anchor) => (
@@ -232,6 +234,19 @@ export default function TemporaryDrawer() {
               width: "100%",
             }}
           >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Tooltip title="MyNotes">
+                <Link to="/">
+                  <img src={Logo} height={"40px"} width={"40px"} alt="" />
+                </Link>
+              </Tooltip>
+            </div>
             <div style={{ width: "100%" }}>
               {" "}
               <input

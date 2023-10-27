@@ -12,7 +12,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import BackPicker from "./BackPicker";
 import ExpandIcon from "./Moreicon";
 import Reminder from "./Reminder";
-import SnackBar from "./SnackBar"
+import SnackBar from "./SnackBar";
 //
 import Tooltip from "@mui/material/Tooltip";
 //
@@ -21,6 +21,7 @@ import { useState, useEffect, useRef } from "react";
 
 const Note = ({ text }) => {
   const [backColor, setBackColor] = useState("white");
+  const [enter, setEnter] = useState(false);
   const myDiv = useRef(null);
   useEffect(() => {
     console.log(backColor);
@@ -73,12 +74,16 @@ const Note = ({ text }) => {
         justifyContent: "space-between",
         borderRadius: "12px",
         boxShadow:
-          "rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px",
+          enter === false
+            ? "rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px"
+            : "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px",
         width: "240px",
         maxHeight: "340px",
         color: "black",
         backgroundColor: { backColor },
       }}
+      onMouseEnter={() => setEnter(true)}
+      onMouseLeave={() => setEnter(false)}
     >
       <div
         style={{

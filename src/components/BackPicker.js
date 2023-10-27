@@ -39,6 +39,17 @@ export default function LongMenu({ icon, setColor }) {
         <Stack direction="row" spacing={2} style={{ padding: "5px" }}>
           <IconButton
             style={{
+              backgroundColor: "white",
+              width: "30px",
+              height: "30px",
+            }}
+            onClick={() => {
+              setbackColor("white");
+              setColor("white");
+            }}
+          ></IconButton>
+          <IconButton
+            style={{
               backgroundColor: "#FFAFCC",
               width: "30px",
               height: "30px",

@@ -3,7 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-
+import { Tooltip } from "@mui/material";
 const options = [
   "Delete Note ",
   "Add Label ",
@@ -25,17 +25,19 @@ export default function LongMenu({ icon }) {
 
   return (
     <div>
-      <IconButton
-        aria-label="more"
-        id="long-button"
-        style={{ color: "black" }}
-        aria-controls={open ? "long-menu" : undefined}
-        aria-expanded={open ? "true" : undefined}
-        aria-haspopup="true"
-        onClick={handleClick}
-      >
-        {icon}
-      </IconButton>
+      <Tooltip title="More" arrow>
+        <IconButton
+          aria-label="more"
+          id="long-button"
+          style={{ color: "black" }}
+          aria-controls={open ? "long-menu" : undefined}
+          aria-expanded={open ? "true" : undefined}
+          aria-haspopup="true"
+          onClick={handleClick}
+        >
+          {icon}
+        </IconButton>
+      </Tooltip>
       <Menu
         id="long-menu"
         MenuListProps={{

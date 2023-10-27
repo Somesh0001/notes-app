@@ -4,6 +4,7 @@ import Reminder from "./pages/Reminder";
 import EditLabel from "./pages/EditLabel";
 import Archived from "./pages/Archived";
 import Bin from "./pages/Bin";
+import Landing from "./pages/Landing";
 import Layout from "./components/Layout";
 const Routes = [
   {
@@ -12,6 +13,10 @@ const Routes = [
     children: [
       {
         index: true,
+        element: <Landing />,
+      },
+      {
+        path: "/home",
         element: <Home />,
       },
       {

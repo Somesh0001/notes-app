@@ -2,6 +2,7 @@ import * as React from "react";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { Tooltip } from "@mui/material";
 // import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const options = [
@@ -24,17 +25,19 @@ export default function LongMenu({ icon }) {
 
   return (
     <div>
-      <IconButton
-        style={{ color: "orange" }}
-        aria-label="more"
-        id="long-button"
-        aria-controls={open ? "long-menu" : undefined}
-        aria-expanded={open ? "true" : undefined}
-        aria-haspopup="true"
-        onClick={handleClick}
-      >
-        {icon}
-      </IconButton>
+      <Tooltip title="Reminder" arrow>
+        <IconButton
+          style={{ color: "orange" }}
+          aria-label="more"
+          id="long-button"
+          aria-controls={open ? "long-menu" : undefined}
+          aria-expanded={open ? "true" : undefined}
+          aria-haspopup="true"
+          onClick={handleClick}
+        >
+          {icon}
+        </IconButton>
+      </Tooltip>
       <Menu
         id="long-menu"
         MenuListProps={{

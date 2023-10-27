@@ -33,8 +33,17 @@ function Home() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            gap: "10px",
+            flexWrap: "wrap",
           }}
         >
+          <Note text={text} />
+          <Note text={text} />
+          <Note text={text} />
+          <Note text={text} />
+          <Note text={text} />
+          <Note text={text} />
+          <Note text={text} />
           <Note text={text} />
         </div>
       </div>
